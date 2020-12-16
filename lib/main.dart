@@ -5,6 +5,7 @@ import 'package:flutter_wordpress_app/pages/articles.dart';
 import 'package:flutter_wordpress_app/pages/local_articles.dart';
 import 'package:flutter_wordpress_app/pages/search.dart';
 import 'package:flutter_wordpress_app/pages/settings.dart';
+import 'package:flutter_wordpress_app/pages/f3map.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyApp());
@@ -51,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Articles(),
     LocalArticles(),
     Search(),
+    F3Map(),
     Settings()
   ];
 
@@ -114,9 +116,17 @@ class _MyHomePageState extends State<MyHomePage> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.flare), label: PAGE2_CATEGORY_NAME),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-            BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'More'),
+                icon: Icon(Icons.home), title: Text(PAGE1_CATEGORY_NAME)),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.flare), title: Text(PAGE2_CATEGORY_NAME)),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.category), title: Text('Categories')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.search), title: Text('Search')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.map), title: Text('Map')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.menu), title: Text('More')),
           ],
           currentIndex: _selectedIndex,
           fixedColor: Theme.of(context).primaryColor,

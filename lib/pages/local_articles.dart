@@ -42,7 +42,7 @@ class _LocalArticlesState extends State<LocalArticles> {
   Future<List<dynamic>> fetchLocalArticles(int page) async {
     try {
       http.Response response = await http.get(
-          "$WORDPRESS_URL/wp-json/wp/v2/posts/?categories[]=$PAGE2_CATEGORY_ID&page=$page&per_page=10&_fields=id,date,title,content,custom,link");
+          "$WORDPRESS_URL/wp-json/wp/v2/posts/?categories[]=$PAGE2_CATEGORY_ID&page=$page&per_page=10&_fields=id,date,author,title,content,custom,link");
       if (this.mounted) {
         if (response.statusCode == 200) {
           setState(() {

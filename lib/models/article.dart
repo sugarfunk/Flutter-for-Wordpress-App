@@ -31,7 +31,7 @@ class Article {
 
     String image = json['custom']["featured_image"] != ""
         ? json['custom']["featured_image"]
-        : "https://images.wallpaperscraft.com/image/surface_dark_background_texture_50754_1920x1080.jpg";
+        : "https://f3nation.com/wp-content/uploads/2018/01/cropped-img_1021-copy-2000x1200b.jpg";
 
     String video = json['custom']["td_video"];
 
@@ -80,8 +80,7 @@ class Article {
 
   Map<String, dynamic> toDatabaseJson() => {
         'id': this.id,
-        'title': this.title,
-        'content': this.content,
+        'title': this.title, 'content': this.content,
         'image': this.image,
         'video': this.video,
         'author': this.author,
