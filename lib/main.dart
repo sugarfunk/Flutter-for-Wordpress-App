@@ -2,7 +2,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_wordpress_app/common/constants.dart';
 import 'package:flutter_wordpress_app/pages/articles.dart';
-import 'package:flutter_wordpress_app/pages/categories.dart';
 import 'package:flutter_wordpress_app/pages/local_articles.dart';
 import 'package:flutter_wordpress_app/pages/search.dart';
 import 'package:flutter_wordpress_app/pages/settings.dart';
@@ -52,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _widgetOptions = [
     Articles(),
     LocalArticles(),
-    Categories(),
     Search(),
     F3Map(),
     Settings()
@@ -116,6 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
               TextStyle(fontWeight: FontWeight.w500, fontFamily: "Soleil"),
           unselectedLabelStyle: TextStyle(fontFamily: "Soleil"),
           items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.home), title: Text(PAGE1_CATEGORY_NAME)),
             BottomNavigationBarItem(
