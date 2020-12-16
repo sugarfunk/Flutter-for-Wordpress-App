@@ -6,6 +6,7 @@ import 'package:flutter_wordpress_app/pages/categories.dart';
 import 'package:flutter_wordpress_app/pages/local_articles.dart';
 import 'package:flutter_wordpress_app/pages/search.dart';
 import 'package:flutter_wordpress_app/pages/settings.dart';
+import 'package:flutter_wordpress_app/pages/f3map.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MyApp());
@@ -53,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
     LocalArticles(),
     Categories(),
     Search(),
+    F3Map(),
     Settings()
   ];
 
@@ -115,13 +117,15 @@ class _MyHomePageState extends State<MyHomePage> {
           unselectedLabelStyle: TextStyle(fontFamily: "Soleil"),
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-                icon: Icon(Icons.home), title: Text('Home')),
+                icon: Icon(Icons.home), title: Text(PAGE1_CATEGORY_NAME)),
             BottomNavigationBarItem(
                 icon: Icon(Icons.flare), title: Text(PAGE2_CATEGORY_NAME)),
             BottomNavigationBarItem(
                 icon: Icon(Icons.category), title: Text('Categories')),
             BottomNavigationBarItem(
                 icon: Icon(Icons.search), title: Text('Search')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.map), title: Text('Map')),
             BottomNavigationBarItem(
                 icon: Icon(Icons.menu), title: Text('More')),
           ],

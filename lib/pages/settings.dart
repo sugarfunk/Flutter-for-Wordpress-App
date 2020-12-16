@@ -88,7 +88,7 @@ class _SettingsState extends State<Settings> {
               alignment: Alignment.center,
               padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
               child: Text(
-                "Version 1.0.0 \n flutterblog.crumet.com \n Demo flutter app for wordpress news website",
+                "Version 0.1 \n https://f3nation.com \n News of the Gloom",
                 textAlign: TextAlign.center,
                 style: TextStyle(height: 1.6, color: Colors.black87),
               ),
@@ -130,7 +130,7 @@ class _SettingsState extends State<Settings> {
                       FlatButton(
                           padding: EdgeInsets.all(0),
                           onPressed: () async {
-                            const url = 'https://flutterblog.crumet.com';
+                            const url = 'f3nation.com';
                             if (await canLaunch(url)) {
                               await launch(url);
                             } else {
@@ -138,13 +138,13 @@ class _SettingsState extends State<Settings> {
                             }
                           },
                           child: Text(
-                            "flutterblog.crumet.com",
+                            "f3nation.com",
                             style: TextStyle(color: Colors.black54),
                           )),
                       FlatButton(
                           padding: EdgeInsets.all(0),
                           onPressed: () async {
-                            const url = 'mailto:info@crumet.com';
+                            const url = 'mailto:csd@f3nation.com';
                             if (await canLaunch(url)) {
                               await launch(url);
                             } else {
@@ -152,7 +152,7 @@ class _SettingsState extends State<Settings> {
                             }
                           },
                           child: Text(
-                            "info@crumet.com",
+                            "csd@f3nation.com",
                             style: TextStyle(color: Colors.black54),
                           )),
                     ],
@@ -161,7 +161,7 @@ class _SettingsState extends State<Settings> {
                 InkWell(
                   onTap: () {
                     Share.share(
-                        'Check out our blog: https://flutterblog.crumet.com');
+                        "Check out F3 Nation's Website Here: https://f3nation.com");
                   },
                   child: ListTile(
                     leading: Image.asset(
@@ -169,7 +169,7 @@ class _SettingsState extends State<Settings> {
                       width: 30,
                     ),
                     title: Text('Share'),
-                    subtitle: Text("Spread the words of flutter blog crumet"),
+                    subtitle: Text("Share F3's Webpage"),
                   ),
                 ),
                 ListTile(
